@@ -1,0 +1,12 @@
+[Desktop Entry]
+# Plantilla para install.sh (reemplaza las dos rutas de abajo).
+Name=Kana Tray
+Comment=Practicá hiragana y katakana desde la bandeja del sistema
+Exec=__EXEC__
+Icon=__ICON__
+Type=Application
+Terminal=false
+Categories=Education;Languages;
+Keywords=japonés;japanese;hiragana;katakana;kana;
+X-GNOME-Autostart-enabled=true
+StartupNotify=false

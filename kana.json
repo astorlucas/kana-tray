@@ -1,0 +1,1962 @@
+[
+  {
+    "id": "h_a",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "あ",
+    "romaji": "a",
+    "alt": [],
+    "mnemonic": "Buscá la 'A' mayúscula escondida dentro de あ."
+  },
+  {
+    "id": "h_i",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "い",
+    "romaji": "i",
+    "alt": [],
+    "mnemonic": "Un par de anguilas (EEls → 'i') una al lado de la otra."
+  },
+  {
+    "id": "h_u",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "う",
+    "romaji": "u",
+    "alt": [],
+    "mnemonic": "Buscá la 'U' acostada escondida dentro de う."
+  },
+  {
+    "id": "h_e",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "え",
+    "romaji": "e",
+    "alt": [],
+    "mnemonic": "Un pájaro exótico (Exotic bird → 'e') poniendo huevos."
+  },
+  {
+    "id": "h_o",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "お",
+    "romaji": "o",
+    "alt": [],
+    "mnemonic": "Dos letras 'o' juntas: el trazo de la derecha y el rulito de abajo."
+  },
+  {
+    "id": "h_ka",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "か",
+    "romaji": "ka",
+    "alt": [],
+    "mnemonic": "'Ka' significa 'mosquito' en japonés: un mosquito con su aguijón."
+  },
+  {
+    "id": "h_ki",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "き",
+    "romaji": "ki",
+    "alt": [],
+    "mnemonic": "Una llave (KEY → 'ki')."
+  },
+  {
+    "id": "h_ku",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "く",
+    "romaji": "ku",
+    "alt": [],
+    "mnemonic": "La boca de un pájaro cucú diciendo '¡KU-ku!'."
+  },
+  {
+    "id": "h_ke",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "け",
+    "romaji": "ke",
+    "alt": [],
+    "mnemonic": "Algas marinas que se retuercen (KElp → 'ke')."
+  },
+  {
+    "id": "h_ko",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "こ",
+    "romaji": "ko",
+    "alt": [],
+    "mnemonic": "Dos gusanitos conviviendo, uno arriba del otro (CO-habitación → 'ko')."
+  },
+  {
+    "id": "h_sa",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "さ",
+    "romaji": "sa",
+    "alt": [],
+    "mnemonic": "Un cucharón revolviendo una SAlsa bien espesa → 'sa'."
+  },
+  {
+    "id": "h_shi",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "し",
+    "romaji": "shi",
+    "alt": [
+      "si"
+    ],
+    "mnemonic": "El cayado de un pastor para arriar ovejas (SHEEp → 'shi')."
+  },
+  {
+    "id": "h_su",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "す",
+    "romaji": "su",
+    "alt": [],
+    "mnemonic": "Un columpio que da un rulo y SUelta al pobre chico que estaba sentado → 'su'."
+  },
+  {
+    "id": "h_se",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "せ",
+    "romaji": "se",
+    "alt": [],
+    "mnemonic": "Una dentadura de vampiro con colmillos (un SEt de dientes → 'se')."
+  },
+  {
+    "id": "h_so",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "そ",
+    "romaji": "so",
+    "alt": [],
+    "mnemonic": "Una boca sorbiendo SOda con una pajita → 'so'."
+  },
+  {
+    "id": "h_ta",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "た",
+    "romaji": "ta",
+    "alt": [],
+    "mnemonic": "Un TAco que comés con tenedor: la 't' es el tenedor y la 'a' el taco."
+  },
+  {
+    "id": "h_chi",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ち",
+    "romaji": "chi",
+    "alt": [
+      "ti"
+    ],
+    "mnemonic": "'Say CHEEse!': la sonrisa forzada que ponés para la foto → 'chi'."
+  },
+  {
+    "id": "h_tsu",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "つ",
+    "romaji": "tsu",
+    "alt": [
+      "tu"
+    ],
+    "mnemonic": "Una ola gigante como un TSUnami → 'tsu'."
+  },
+  {
+    "id": "h_te",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "て",
+    "romaji": "te",
+    "alt": [],
+    "mnemonic": "Un TElescopio de mano → 'te'."
+  },
+  {
+    "id": "h_to",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "と",
+    "romaji": "to",
+    "alt": [],
+    "mnemonic": "Un dedo del pie (TOe → 'to') con una astilla clavada."
+  },
+  {
+    "id": "h_na",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "な",
+    "romaji": "na",
+    "alt": [],
+    "mnemonic": "Una monja rezando frente a la cruz, pidiendo NAchos → 'na'."
+  },
+  {
+    "id": "h_ni",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "に",
+    "romaji": "ni",
+    "alt": [],
+    "mnemonic": "Una aguja (NEEdle → 'ni') tirando de un hilo."
+  },
+  {
+    "id": "h_nu",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ぬ",
+    "romaji": "nu",
+    "alt": [],
+    "mnemonic": "Unos fideos (NOOdles → 'nu') enredados."
+  },
+  {
+    "id": "h_ne",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ね",
+    "romaji": "ne",
+    "alt": [],
+    "mnemonic": "Nelly, la NEko (gato en japonés) → 'ne'."
+  },
+  {
+    "id": "h_no",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "の",
+    "romaji": "no",
+    "alt": [],
+    "mnemonic": "La nariz de un chancho (NOse → 'no')."
+  },
+  {
+    "id": "h_ha",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "は",
+    "romaji": "ha",
+    "alt": [],
+    "mnemonic": "は parece una 'H' + una 'a' → 'ha'."
+  },
+  {
+    "id": "h_hi",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ひ",
+    "romaji": "hi",
+    "alt": [],
+    "mnemonic": "Él (HE → 'hi') tiene una nariz enorme: una cara de perfil sonriendo."
+  },
+  {
+    "id": "h_fu",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ふ",
+    "romaji": "fu",
+    "alt": [
+      "hu"
+    ],
+    "mnemonic": "Un bufón (FOOl → 'fu') bailando con el hula-hula."
+  },
+  {
+    "id": "h_he",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "へ",
+    "romaji": "he",
+    "alt": [],
+    "mnemonic": "La famosa montaña: el monte Santa HElena → 'he'."
+  },
+  {
+    "id": "h_ho",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ほ",
+    "romaji": "ho",
+    "alt": [],
+    "mnemonic": "Un Papá Noel mutante diciendo '¡HO ho ho!' → 'ho'."
+  },
+  {
+    "id": "h_ma",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ま",
+    "romaji": "ma",
+    "alt": [],
+    "mnemonic": "Imaginate a tu MAmá con esta pinta. ¡Aghh! → 'ma'."
+  },
+  {
+    "id": "h_mi",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "み",
+    "romaji": "mi",
+    "alt": [],
+    "mnemonic": "¿Quién cumplió 21? ¡Yo! (ME → 'mi'). み parece un 21."
+  },
+  {
+    "id": "h_mu",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "む",
+    "romaji": "mu",
+    "alt": [],
+    "mnemonic": "'¡MUuuu!', dice la vaca → 'mu'."
+  },
+  {
+    "id": "h_me",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "め",
+    "romaji": "me",
+    "alt": [],
+    "mnemonic": "'Me' significa 'ojo' en japonés: un ojo grande."
+  },
+  {
+    "id": "h_mo",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "も",
+    "romaji": "mo",
+    "alt": [],
+    "mnemonic": "Para pescar MÁS (MOre → 'mo') peces, poné más gusanos en el anzuelo."
+  },
+  {
+    "id": "h_ya",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "や",
+    "romaji": "ya",
+    "alt": [],
+    "mnemonic": "Un yate (YAcht → 'ya') con su ancla."
+  },
+  {
+    "id": "h_yu",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ゆ",
+    "romaji": "yu",
+    "alt": [],
+    "mnemonic": "Un pez rarísimo (Unique fish → 'yu')."
+  },
+  {
+    "id": "h_yo",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "よ",
+    "romaji": "yo",
+    "alt": [],
+    "mnemonic": "¡YO! Buscá la 'y' y la 'o' dentro de よ."
+  },
+  {
+    "id": "h_ra",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ら",
+    "romaji": "ra",
+    "alt": [],
+    "mnemonic": "Un conejo (RAbbit → 'ra')."
+  },
+  {
+    "id": "h_ri",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "り",
+    "romaji": "ri",
+    "alt": [],
+    "mnemonic": "Juncos (REEds → 'ri') meciéndose con el viento."
+  },
+  {
+    "id": "h_ru",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "る",
+    "romaji": "ru",
+    "alt": [],
+    "mnemonic": "る es un camino (ROUte → 'ru') más loco: termina en un rulo."
+  },
+  {
+    "id": "h_re",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "れ",
+    "romaji": "re",
+    "alt": [],
+    "mnemonic": "Este tipo está vomitando (REtching → 're') la cena."
+  },
+  {
+    "id": "h_ro",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ろ",
+    "romaji": "ro",
+    "alt": [],
+    "mnemonic": "Un camino común (ROad → 'ro'), sobre todo comparado con る (que tiene rulo)."
+  },
+  {
+    "id": "h_wa",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "わ",
+    "romaji": "wa",
+    "alt": [],
+    "mnemonic": "Una avispa (WAsp → 'wa') volando derecho hacia arriba."
+  },
+  {
+    "id": "h_wo",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "を",
+    "romaji": "wo",
+    "alt": [
+      "o"
+    ],
+    "mnemonic": "¡WHOA! Tiene un búmeran en la boca → 'wo' (suena 'o')."
+  },
+  {
+    "id": "h_n",
+    "script": "hiragana",
+    "group": "basic",
+    "kana": "ん",
+    "romaji": "n",
+    "alt": [
+      "nn"
+    ],
+    "mnemonic": "ん es igualita a una 'n' minúscula."
+  },
+  {
+    "id": "k_a",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ア",
+    "romaji": "a",
+    "alt": [],
+    "mnemonic": "Un hacha (Axe → 'a') vista de costado."
+  },
+  {
+    "id": "k_i",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "イ",
+    "romaji": "i",
+    "alt": [],
+    "mnemonic": "Un águila de perfil: la 'i' inclinada con una rama."
+  },
+  {
+    "id": "k_u",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ウ",
+    "romaji": "u",
+    "alt": [],
+    "mnemonic": "Como う pero cuadrada, con techito: '¡Uuu, qué casa!'."
+  },
+  {
+    "id": "k_e",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "エ",
+    "romaji": "e",
+    "alt": [],
+    "mnemonic": "Una viga en 'I' de un Edificio."
+  },
+  {
+    "id": "k_o",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "オ",
+    "romaji": "o",
+    "alt": [],
+    "mnemonic": "Una persona con los brazos abiertos cantando ópera: '¡Oooo!'."
+  },
+  {
+    "id": "k_ka",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "カ",
+    "romaji": "ka",
+    "alt": [],
+    "mnemonic": "Igual que か sin el trazo suelto: el mosquito (KA) sin su ala."
+  },
+  {
+    "id": "k_ki",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "キ",
+    "romaji": "ki",
+    "alt": [],
+    "mnemonic": "Igual que き sin la curva de abajo: una llave (key → 'ki')."
+  },
+  {
+    "id": "k_ku",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ク",
+    "romaji": "ku",
+    "alt": [],
+    "mnemonic": "El pico del cucú con techito arriba: 'KU-ku'. (タ tiene una rayita adentro.)"
+  },
+  {
+    "id": "k_ke",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ケ",
+    "romaji": "ke",
+    "alt": [],
+    "mnemonic": "Una 'K' torcida con un barril (keg → 'ke')."
+  },
+  {
+    "id": "k_ko",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "コ",
+    "romaji": "ko",
+    "alt": [],
+    "mnemonic": "Una esquina de caja: como こ pero unida por la derecha → 'ko'."
+  },
+  {
+    "id": "k_sa",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "サ",
+    "romaji": "sa",
+    "alt": [],
+    "mnemonic": "Un cactus SAguaro con dos brazos."
+  },
+  {
+    "id": "k_shi",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "シ",
+    "romaji": "shi",
+    "alt": [
+      "si"
+    ],
+    "mnemonic": "Carita sonriente mirando hacia arriba: las dos gotitas están acostadas y el trazo largo SUBE desde abajo a la izquierda. (vs ツ)"
+  },
+  {
+    "id": "k_su",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ス",
+    "romaji": "su",
+    "alt": [],
+    "mnemonic": "Una persona con las piernas abiertas y la cola, SUbiendo al columpio."
+  },
+  {
+    "id": "k_se",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "セ",
+    "romaji": "se",
+    "alt": [],
+    "mnemonic": "Como せ con líneas rectas: los colmillos de vampiro (un SEt de dientes → 'se')."
+  },
+  {
+    "id": "k_so",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ソ",
+    "romaji": "so",
+    "alt": [],
+    "mnemonic": "Una SOmbrilla cerrada: una gotita y un trazo largo que BAJA desde arriba. (vs ン, donde el trazo largo sube)"
+  },
+  {
+    "id": "k_ta",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "タ",
+    "romaji": "ta",
+    "alt": [],
+    "mnemonic": "Como ク con una rayita adentro: un TAco doblado con relleno."
+  },
+  {
+    "id": "k_chi",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "チ",
+    "romaji": "chi",
+    "alt": [
+      "ti"
+    ],
+    "mnemonic": "La porrista (cheerleader → 'chi') con los brazos abiertos. Parece 千 (mil)."
+  },
+  {
+    "id": "k_tsu",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ツ",
+    "romaji": "tsu",
+    "alt": [
+      "tu"
+    ],
+    "mnemonic": "Ola de TSUnami: las dos gotitas caen parado (vertical) y el trazo largo BAJA de arriba a la derecha. (vs シ)"
+  },
+  {
+    "id": "k_te",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "テ",
+    "romaji": "te",
+    "alt": [],
+    "mnemonic": "Una antena de TElevisión."
+  },
+  {
+    "id": "k_to",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ト",
+    "romaji": "to",
+    "alt": [],
+    "mnemonic": "Un TÓtem: un palo con una rama."
+  },
+  {
+    "id": "k_na",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ナ",
+    "romaji": "na",
+    "alt": [],
+    "mnemonic": "Una cruz de NAvidad inclinada."
+  },
+  {
+    "id": "k_ni",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ニ",
+    "romaji": "ni",
+    "alt": [],
+    "mnemonic": "Dos rayas: 二 = dos = 'ni'. También una aguja (NEEdle) doble."
+  },
+  {
+    "id": "k_nu",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヌ",
+    "romaji": "nu",
+    "alt": [],
+    "mnemonic": "Dos palillos comiendo fideos (NOOdles → 'nu')."
+  },
+  {
+    "id": "k_ne",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ネ",
+    "romaji": "ne",
+    "alt": [],
+    "mnemonic": "Nelly, la NEko (gato), parada con la cola abajo."
+  },
+  {
+    "id": "k_no",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ノ",
+    "romaji": "no",
+    "alt": [],
+    "mnemonic": "Una sola barra que tacha todo: 'NO'."
+  },
+  {
+    "id": "k_ha",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ハ",
+    "romaji": "ha",
+    "alt": [],
+    "mnemonic": "Dos palitos separados como una boca abierta riendo '¡HA!'."
+  },
+  {
+    "id": "k_hi",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヒ",
+    "romaji": "hi",
+    "alt": [],
+    "mnemonic": "Como ひ en ángulos rectos: él (HE → 'hi') sacando su nariz grande."
+  },
+  {
+    "id": "k_fu",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "フ",
+    "romaji": "fu",
+    "alt": [
+      "hu"
+    ],
+    "mnemonic": "Como la parte de arriba de ふ: el sombrero del bufón (FOOl → 'fu')."
+  },
+  {
+    "id": "k_he",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヘ",
+    "romaji": "he",
+    "alt": [],
+    "mnemonic": "Igual que へ: el monte Santa HElena."
+  },
+  {
+    "id": "k_ho",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ホ",
+    "romaji": "ho",
+    "alt": [],
+    "mnemonic": "Como ほ sin el palo izquierdo: el Papá Noel mutante '¡HO ho ho!' como un árbol con adornos."
+  },
+  {
+    "id": "k_ma",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "マ",
+    "romaji": "ma",
+    "alt": [],
+    "mnemonic": "Una copa de MArtini inclinada."
+  },
+  {
+    "id": "k_mi",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ミ",
+    "romaji": "mi",
+    "alt": [],
+    "mnemonic": "Tres rayitas: 'mi, mi, mi' (vocalizando)."
+  },
+  {
+    "id": "k_mu",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ム",
+    "romaji": "mu",
+    "alt": [],
+    "mnemonic": "La cabeza de una vaca mugiendo 'MUuu'."
+  },
+  {
+    "id": "k_me",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "メ",
+    "romaji": "me",
+    "alt": [],
+    "mnemonic": "Una X: un guiño de ojo (ojo = 'me')."
+  },
+  {
+    "id": "k_mo",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "モ",
+    "romaji": "mo",
+    "alt": [],
+    "mnemonic": "Como も con líneas rectas: pescás MOre (más) peces."
+  },
+  {
+    "id": "k_ya",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヤ",
+    "romaji": "ya",
+    "alt": [],
+    "mnemonic": "Un yate (YAcht → 'ya') con el mástil y la vela."
+  },
+  {
+    "id": "k_yu",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ユ",
+    "romaji": "yu",
+    "alt": [],
+    "mnemonic": "Una 'U' acostada → 'yU'."
+  },
+  {
+    "id": "k_yo",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヨ",
+    "romaji": "yo",
+    "alt": [],
+    "mnemonic": "Una 'E' al revés: un YO-yo con sus hilos."
+  },
+  {
+    "id": "k_ra",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ラ",
+    "romaji": "ra",
+    "alt": [],
+    "mnemonic": "Una RAta con una orejita chata arriba."
+  },
+  {
+    "id": "k_ri",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "リ",
+    "romaji": "ri",
+    "alt": [],
+    "mnemonic": "Los mismos juncos (REEds → 'ri') que り, pero rectos."
+  },
+  {
+    "id": "k_ru",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ル",
+    "romaji": "ru",
+    "alt": [],
+    "mnemonic": "Dos patas separadas: un canguRU parado."
+  },
+  {
+    "id": "k_re",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "レ",
+    "romaji": "re",
+    "alt": [],
+    "mnemonic": "Un tilde de check: '¡REbien!'."
+  },
+  {
+    "id": "k_ro",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ロ",
+    "romaji": "ro",
+    "alt": [],
+    "mnemonic": "Una caja cuadrada: la cabeza de un RObot."
+  },
+  {
+    "id": "k_wa",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ワ",
+    "romaji": "wa",
+    "alt": [],
+    "mnemonic": "Una copa de vino (Wine → 'wa')."
+  },
+  {
+    "id": "k_wo",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ヲ",
+    "romaji": "wo",
+    "alt": [
+      "o"
+    ],
+    "mnemonic": "Como ワ con una raya extra: alguien corriendo '¡WOoo!'. Suena 'o'."
+  },
+  {
+    "id": "k_n",
+    "script": "katakana",
+    "group": "basic",
+    "kana": "ン",
+    "romaji": "n",
+    "alt": [
+      "nn"
+    ],
+    "mnemonic": "Una gotita y un trazo largo que SUBE desde abajo: alguien durmiendo 'nnn...'. (vs ソ)"
+  },
+  {
+    "id": "h_ga",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "が",
+    "romaji": "ga",
+    "alt": [],
+    "mnemonic": "か (ka) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → ga."
+  },
+  {
+    "id": "h_gi",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぎ",
+    "romaji": "gi",
+    "alt": [],
+    "mnemonic": "き (ki) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → gi."
+  },
+  {
+    "id": "h_gu",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぐ",
+    "romaji": "gu",
+    "alt": [],
+    "mnemonic": "く (ku) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → gu."
+  },
+  {
+    "id": "h_ge",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "げ",
+    "romaji": "ge",
+    "alt": [],
+    "mnemonic": "け (ke) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → ge."
+  },
+  {
+    "id": "h_go",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ご",
+    "romaji": "go",
+    "alt": [],
+    "mnemonic": "こ (ko) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → go."
+  },
+  {
+    "id": "h_za",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ざ",
+    "romaji": "za",
+    "alt": [],
+    "mnemonic": "さ (sa) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → za."
+  },
+  {
+    "id": "h_ji",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "じ",
+    "romaji": "ji",
+    "alt": [
+      "zi"
+    ],
+    "mnemonic": "し (shi) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → ji."
+  },
+  {
+    "id": "h_zu",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ず",
+    "romaji": "zu",
+    "alt": [],
+    "mnemonic": "す (su) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → zu."
+  },
+  {
+    "id": "h_ze",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぜ",
+    "romaji": "ze",
+    "alt": [],
+    "mnemonic": "せ (se) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → ze."
+  },
+  {
+    "id": "h_zo",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぞ",
+    "romaji": "zo",
+    "alt": [],
+    "mnemonic": "そ (so) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → zo."
+  },
+  {
+    "id": "h_da",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "だ",
+    "romaji": "da",
+    "alt": [],
+    "mnemonic": "た (ta) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → da."
+  },
+  {
+    "id": "h_ji_di",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぢ",
+    "romaji": "ji",
+    "alt": [
+      "di",
+      "dji"
+    ],
+    "mnemonic": "ち (chi) + ゛ (dakuten, dos rayitas): la 'c' se vuelve sonora → ji. Es rara: casi siempre se usa じ/ず."
+  },
+  {
+    "id": "h_zu_du",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "づ",
+    "romaji": "zu",
+    "alt": [
+      "du",
+      "dzu"
+    ],
+    "mnemonic": "つ (tsu) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → zu. Es rara: casi siempre se usa じ/ず."
+  },
+  {
+    "id": "h_de",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "で",
+    "romaji": "de",
+    "alt": [],
+    "mnemonic": "て (te) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → de."
+  },
+  {
+    "id": "h_do",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ど",
+    "romaji": "do",
+    "alt": [],
+    "mnemonic": "と (to) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → do."
+  },
+  {
+    "id": "h_ba",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ば",
+    "romaji": "ba",
+    "alt": [],
+    "mnemonic": "は (ha) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → ba."
+  },
+  {
+    "id": "h_bi",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "び",
+    "romaji": "bi",
+    "alt": [],
+    "mnemonic": "ひ (hi) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → bi."
+  },
+  {
+    "id": "h_bu",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぶ",
+    "romaji": "bu",
+    "alt": [],
+    "mnemonic": "ふ (fu) + ゛ (dakuten, dos rayitas): la 'f' se vuelve sonora → bu."
+  },
+  {
+    "id": "h_be",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "べ",
+    "romaji": "be",
+    "alt": [],
+    "mnemonic": "へ (he) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → be."
+  },
+  {
+    "id": "h_bo",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぼ",
+    "romaji": "bo",
+    "alt": [],
+    "mnemonic": "ほ (ho) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → bo."
+  },
+  {
+    "id": "h_pa",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぱ",
+    "romaji": "pa",
+    "alt": [],
+    "mnemonic": "は (ha) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pa."
+  },
+  {
+    "id": "h_pi",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぴ",
+    "romaji": "pi",
+    "alt": [],
+    "mnemonic": "ひ (hi) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pi."
+  },
+  {
+    "id": "h_pu",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぷ",
+    "romaji": "pu",
+    "alt": [],
+    "mnemonic": "ふ (fu) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pu."
+  },
+  {
+    "id": "h_pe",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぺ",
+    "romaji": "pe",
+    "alt": [],
+    "mnemonic": "へ (he) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pe."
+  },
+  {
+    "id": "h_po",
+    "script": "hiragana",
+    "group": "dakuten",
+    "kana": "ぽ",
+    "romaji": "po",
+    "alt": [],
+    "mnemonic": "ほ (ho) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → po."
+  },
+  {
+    "id": "k_ga",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ガ",
+    "romaji": "ga",
+    "alt": [],
+    "mnemonic": "カ (ka) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → ga."
+  },
+  {
+    "id": "k_gi",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ギ",
+    "romaji": "gi",
+    "alt": [],
+    "mnemonic": "キ (ki) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → gi."
+  },
+  {
+    "id": "k_gu",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "グ",
+    "romaji": "gu",
+    "alt": [],
+    "mnemonic": "ク (ku) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → gu."
+  },
+  {
+    "id": "k_ge",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ゲ",
+    "romaji": "ge",
+    "alt": [],
+    "mnemonic": "ケ (ke) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → ge."
+  },
+  {
+    "id": "k_go",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ゴ",
+    "romaji": "go",
+    "alt": [],
+    "mnemonic": "コ (ko) + ゛ (dakuten, dos rayitas): la 'k' se vuelve sonora → go."
+  },
+  {
+    "id": "k_za",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ザ",
+    "romaji": "za",
+    "alt": [],
+    "mnemonic": "サ (sa) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → za."
+  },
+  {
+    "id": "k_ji",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ジ",
+    "romaji": "ji",
+    "alt": [
+      "zi"
+    ],
+    "mnemonic": "シ (shi) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → ji."
+  },
+  {
+    "id": "k_zu",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ズ",
+    "romaji": "zu",
+    "alt": [],
+    "mnemonic": "ス (su) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → zu."
+  },
+  {
+    "id": "k_ze",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ゼ",
+    "romaji": "ze",
+    "alt": [],
+    "mnemonic": "セ (se) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → ze."
+  },
+  {
+    "id": "k_zo",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ゾ",
+    "romaji": "zo",
+    "alt": [],
+    "mnemonic": "ソ (so) + ゛ (dakuten, dos rayitas): la 's' se vuelve sonora → zo."
+  },
+  {
+    "id": "k_da",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ダ",
+    "romaji": "da",
+    "alt": [],
+    "mnemonic": "タ (ta) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → da."
+  },
+  {
+    "id": "k_ji_di",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ヂ",
+    "romaji": "ji",
+    "alt": [
+      "di",
+      "dji"
+    ],
+    "mnemonic": "チ (chi) + ゛ (dakuten, dos rayitas): la 'c' se vuelve sonora → ji. Es rara: casi siempre se usa じ/ず."
+  },
+  {
+    "id": "k_zu_du",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ヅ",
+    "romaji": "zu",
+    "alt": [
+      "du",
+      "dzu"
+    ],
+    "mnemonic": "ツ (tsu) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → zu. Es rara: casi siempre se usa じ/ず."
+  },
+  {
+    "id": "k_de",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "デ",
+    "romaji": "de",
+    "alt": [],
+    "mnemonic": "テ (te) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → de."
+  },
+  {
+    "id": "k_do",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ド",
+    "romaji": "do",
+    "alt": [],
+    "mnemonic": "ト (to) + ゛ (dakuten, dos rayitas): la 't' se vuelve sonora → do."
+  },
+  {
+    "id": "k_ba",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "バ",
+    "romaji": "ba",
+    "alt": [],
+    "mnemonic": "ハ (ha) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → ba."
+  },
+  {
+    "id": "k_bi",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ビ",
+    "romaji": "bi",
+    "alt": [],
+    "mnemonic": "ヒ (hi) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → bi."
+  },
+  {
+    "id": "k_bu",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ブ",
+    "romaji": "bu",
+    "alt": [],
+    "mnemonic": "フ (fu) + ゛ (dakuten, dos rayitas): la 'f' se vuelve sonora → bu."
+  },
+  {
+    "id": "k_be",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ベ",
+    "romaji": "be",
+    "alt": [],
+    "mnemonic": "ヘ (he) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → be."
+  },
+  {
+    "id": "k_bo",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ボ",
+    "romaji": "bo",
+    "alt": [],
+    "mnemonic": "ホ (ho) + ゛ (dakuten, dos rayitas): la 'h' se vuelve sonora → bo."
+  },
+  {
+    "id": "k_pa",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "パ",
+    "romaji": "pa",
+    "alt": [],
+    "mnemonic": "ハ (ha) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pa."
+  },
+  {
+    "id": "k_pi",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ピ",
+    "romaji": "pi",
+    "alt": [],
+    "mnemonic": "ヒ (hi) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pi."
+  },
+  {
+    "id": "k_pu",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "プ",
+    "romaji": "pu",
+    "alt": [],
+    "mnemonic": "フ (fu) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pu."
+  },
+  {
+    "id": "k_pe",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ペ",
+    "romaji": "pe",
+    "alt": [],
+    "mnemonic": "ヘ (he) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → pe."
+  },
+  {
+    "id": "k_po",
+    "script": "katakana",
+    "group": "dakuten",
+    "kana": "ポ",
+    "romaji": "po",
+    "alt": [],
+    "mnemonic": "ホ (ho) + ゜ (handakuten, circulito): la 'h' se vuelve 'p' → po."
+  },
+  {
+    "id": "h_kya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "きゃ",
+    "romaji": "kya",
+    "alt": [],
+    "mnemonic": "き (ki) + ゃ chiquita: se funden en una sola sílaba → kya."
+  },
+  {
+    "id": "h_kyu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "きゅ",
+    "romaji": "kyu",
+    "alt": [],
+    "mnemonic": "き (ki) + ゅ chiquita: se funden en una sola sílaba → kyu."
+  },
+  {
+    "id": "h_kyo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "きょ",
+    "romaji": "kyo",
+    "alt": [],
+    "mnemonic": "き (ki) + ょ chiquita: se funden en una sola sílaba → kyo."
+  },
+  {
+    "id": "h_sha",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "しゃ",
+    "romaji": "sha",
+    "alt": [
+      "sya"
+    ],
+    "mnemonic": "し (shi) + ゃ chiquita: se funden en una sola sílaba → sha."
+  },
+  {
+    "id": "h_shu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "しゅ",
+    "romaji": "shu",
+    "alt": [
+      "syu"
+    ],
+    "mnemonic": "し (shi) + ゅ chiquita: se funden en una sola sílaba → shu."
+  },
+  {
+    "id": "h_sho",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "しょ",
+    "romaji": "sho",
+    "alt": [
+      "syo"
+    ],
+    "mnemonic": "し (shi) + ょ chiquita: se funden en una sola sílaba → sho."
+  },
+  {
+    "id": "h_cha",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ちゃ",
+    "romaji": "cha",
+    "alt": [
+      "tya",
+      "cya"
+    ],
+    "mnemonic": "ち (chi) + ゃ chiquita: se funden en una sola sílaba → cha."
+  },
+  {
+    "id": "h_chu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ちゅ",
+    "romaji": "chu",
+    "alt": [
+      "tyu",
+      "cyu"
+    ],
+    "mnemonic": "ち (chi) + ゅ chiquita: se funden en una sola sílaba → chu."
+  },
+  {
+    "id": "h_cho",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ちょ",
+    "romaji": "cho",
+    "alt": [
+      "tyo",
+      "cyo"
+    ],
+    "mnemonic": "ち (chi) + ょ chiquita: se funden en una sola sílaba → cho."
+  },
+  {
+    "id": "h_nya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "にゃ",
+    "romaji": "nya",
+    "alt": [],
+    "mnemonic": "に (ni) + ゃ chiquita: se funden en una sola sílaba → nya."
+  },
+  {
+    "id": "h_nyu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "にゅ",
+    "romaji": "nyu",
+    "alt": [],
+    "mnemonic": "に (ni) + ゅ chiquita: se funden en una sola sílaba → nyu."
+  },
+  {
+    "id": "h_nyo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "にょ",
+    "romaji": "nyo",
+    "alt": [],
+    "mnemonic": "に (ni) + ょ chiquita: se funden en una sola sílaba → nyo."
+  },
+  {
+    "id": "h_hya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ひゃ",
+    "romaji": "hya",
+    "alt": [],
+    "mnemonic": "ひ (hi) + ゃ chiquita: se funden en una sola sílaba → hya."
+  },
+  {
+    "id": "h_hyu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ひゅ",
+    "romaji": "hyu",
+    "alt": [],
+    "mnemonic": "ひ (hi) + ゅ chiquita: se funden en una sola sílaba → hyu."
+  },
+  {
+    "id": "h_hyo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ひょ",
+    "romaji": "hyo",
+    "alt": [],
+    "mnemonic": "ひ (hi) + ょ chiquita: se funden en una sola sílaba → hyo."
+  },
+  {
+    "id": "h_mya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "みゃ",
+    "romaji": "mya",
+    "alt": [],
+    "mnemonic": "み (mi) + ゃ chiquita: se funden en una sola sílaba → mya."
+  },
+  {
+    "id": "h_myu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "みゅ",
+    "romaji": "myu",
+    "alt": [],
+    "mnemonic": "み (mi) + ゅ chiquita: se funden en una sola sílaba → myu."
+  },
+  {
+    "id": "h_myo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "みょ",
+    "romaji": "myo",
+    "alt": [],
+    "mnemonic": "み (mi) + ょ chiquita: se funden en una sola sílaba → myo."
+  },
+  {
+    "id": "h_rya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "りゃ",
+    "romaji": "rya",
+    "alt": [],
+    "mnemonic": "り (ri) + ゃ chiquita: se funden en una sola sílaba → rya."
+  },
+  {
+    "id": "h_ryu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "りゅ",
+    "romaji": "ryu",
+    "alt": [],
+    "mnemonic": "り (ri) + ゅ chiquita: se funden en una sola sílaba → ryu."
+  },
+  {
+    "id": "h_ryo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "りょ",
+    "romaji": "ryo",
+    "alt": [],
+    "mnemonic": "り (ri) + ょ chiquita: se funden en una sola sílaba → ryo."
+  },
+  {
+    "id": "h_gya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぎゃ",
+    "romaji": "gya",
+    "alt": [],
+    "mnemonic": "ぎ (gi) + ゃ chiquita: se funden en una sola sílaba → gya."
+  },
+  {
+    "id": "h_gyu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぎゅ",
+    "romaji": "gyu",
+    "alt": [],
+    "mnemonic": "ぎ (gi) + ゅ chiquita: se funden en una sola sílaba → gyu."
+  },
+  {
+    "id": "h_gyo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぎょ",
+    "romaji": "gyo",
+    "alt": [],
+    "mnemonic": "ぎ (gi) + ょ chiquita: se funden en una sola sílaba → gyo."
+  },
+  {
+    "id": "h_ja",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "じゃ",
+    "romaji": "ja",
+    "alt": [
+      "jya",
+      "zya"
+    ],
+    "mnemonic": "じ (ji) + ゃ chiquita: se funden en una sola sílaba → ja."
+  },
+  {
+    "id": "h_ju",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "じゅ",
+    "romaji": "ju",
+    "alt": [
+      "jyu",
+      "zyu"
+    ],
+    "mnemonic": "じ (ji) + ゅ chiquita: se funden en una sola sílaba → ju."
+  },
+  {
+    "id": "h_jo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "じょ",
+    "romaji": "jo",
+    "alt": [
+      "jyo",
+      "zyo"
+    ],
+    "mnemonic": "じ (ji) + ょ chiquita: se funden en una sola sílaba → jo."
+  },
+  {
+    "id": "h_bya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "びゃ",
+    "romaji": "bya",
+    "alt": [],
+    "mnemonic": "び (bi) + ゃ chiquita: se funden en una sola sílaba → bya."
+  },
+  {
+    "id": "h_byu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "びゅ",
+    "romaji": "byu",
+    "alt": [],
+    "mnemonic": "び (bi) + ゅ chiquita: se funden en una sola sílaba → byu."
+  },
+  {
+    "id": "h_byo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "びょ",
+    "romaji": "byo",
+    "alt": [],
+    "mnemonic": "び (bi) + ょ chiquita: se funden en una sola sílaba → byo."
+  },
+  {
+    "id": "h_pya",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぴゃ",
+    "romaji": "pya",
+    "alt": [],
+    "mnemonic": "ぴ (pi) + ゃ chiquita: se funden en una sola sílaba → pya."
+  },
+  {
+    "id": "h_pyu",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぴゅ",
+    "romaji": "pyu",
+    "alt": [],
+    "mnemonic": "ぴ (pi) + ゅ chiquita: se funden en una sola sílaba → pyu."
+  },
+  {
+    "id": "h_pyo",
+    "script": "hiragana",
+    "group": "yoon",
+    "kana": "ぴょ",
+    "romaji": "pyo",
+    "alt": [],
+    "mnemonic": "ぴ (pi) + ょ chiquita: se funden en una sola sílaba → pyo."
+  },
+  {
+    "id": "k_kya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "キャ",
+    "romaji": "kya",
+    "alt": [],
+    "mnemonic": "キ (ki) + ャ chiquita: se funden en una sola sílaba → kya."
+  },
+  {
+    "id": "k_kyu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "キュ",
+    "romaji": "kyu",
+    "alt": [],
+    "mnemonic": "キ (ki) + ュ chiquita: se funden en una sola sílaba → kyu."
+  },
+  {
+    "id": "k_kyo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "キョ",
+    "romaji": "kyo",
+    "alt": [],
+    "mnemonic": "キ (ki) + ョ chiquita: se funden en una sola sílaba → kyo."
+  },
+  {
+    "id": "k_sha",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "シャ",
+    "romaji": "sha",
+    "alt": [
+      "sya"
+    ],
+    "mnemonic": "シ (shi) + ャ chiquita: se funden en una sola sílaba → sha."
+  },
+  {
+    "id": "k_shu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "シュ",
+    "romaji": "shu",
+    "alt": [
+      "syu"
+    ],
+    "mnemonic": "シ (shi) + ュ chiquita: se funden en una sola sílaba → shu."
+  },
+  {
+    "id": "k_sho",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ショ",
+    "romaji": "sho",
+    "alt": [
+      "syo"
+    ],
+    "mnemonic": "シ (shi) + ョ chiquita: se funden en una sola sílaba → sho."
+  },
+  {
+    "id": "k_cha",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "チャ",
+    "romaji": "cha",
+    "alt": [
+      "tya",
+      "cya"
+    ],
+    "mnemonic": "チ (chi) + ャ chiquita: se funden en una sola sílaba → cha."
+  },
+  {
+    "id": "k_chu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "チュ",
+    "romaji": "chu",
+    "alt": [
+      "tyu",
+      "cyu"
+    ],
+    "mnemonic": "チ (chi) + ュ chiquita: se funden en una sola sílaba → chu."
+  },
+  {
+    "id": "k_cho",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "チョ",
+    "romaji": "cho",
+    "alt": [
+      "tyo",
+      "cyo"
+    ],
+    "mnemonic": "チ (chi) + ョ chiquita: se funden en una sola sílaba → cho."
+  },
+  {
+    "id": "k_nya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ニャ",
+    "romaji": "nya",
+    "alt": [],
+    "mnemonic": "ニ (ni) + ャ chiquita: se funden en una sola sílaba → nya."
+  },
+  {
+    "id": "k_nyu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ニュ",
+    "romaji": "nyu",
+    "alt": [],
+    "mnemonic": "ニ (ni) + ュ chiquita: se funden en una sola sílaba → nyu."
+  },
+  {
+    "id": "k_nyo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ニョ",
+    "romaji": "nyo",
+    "alt": [],
+    "mnemonic": "ニ (ni) + ョ chiquita: se funden en una sola sílaba → nyo."
+  },
+  {
+    "id": "k_hya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ヒャ",
+    "romaji": "hya",
+    "alt": [],
+    "mnemonic": "ヒ (hi) + ャ chiquita: se funden en una sola sílaba → hya."
+  },
+  {
+    "id": "k_hyu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ヒュ",
+    "romaji": "hyu",
+    "alt": [],
+    "mnemonic": "ヒ (hi) + ュ chiquita: se funden en una sola sílaba → hyu."
+  },
+  {
+    "id": "k_hyo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ヒョ",
+    "romaji": "hyo",
+    "alt": [],
+    "mnemonic": "ヒ (hi) + ョ chiquita: se funden en una sola sílaba → hyo."
+  },
+  {
+    "id": "k_mya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ミャ",
+    "romaji": "mya",
+    "alt": [],
+    "mnemonic": "ミ (mi) + ャ chiquita: se funden en una sola sílaba → mya."
+  },
+  {
+    "id": "k_myu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ミュ",
+    "romaji": "myu",
+    "alt": [],
+    "mnemonic": "ミ (mi) + ュ chiquita: se funden en una sola sílaba → myu."
+  },
+  {
+    "id": "k_myo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ミョ",
+    "romaji": "myo",
+    "alt": [],
+    "mnemonic": "ミ (mi) + ョ chiquita: se funden en una sola sílaba → myo."
+  },
+  {
+    "id": "k_rya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "リャ",
+    "romaji": "rya",
+    "alt": [],
+    "mnemonic": "リ (ri) + ャ chiquita: se funden en una sola sílaba → rya."
+  },
+  {
+    "id": "k_ryu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "リュ",
+    "romaji": "ryu",
+    "alt": [],
+    "mnemonic": "リ (ri) + ュ chiquita: se funden en una sola sílaba → ryu."
+  },
+  {
+    "id": "k_ryo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "リョ",
+    "romaji": "ryo",
+    "alt": [],
+    "mnemonic": "リ (ri) + ョ chiquita: se funden en una sola sílaba → ryo."
+  },
+  {
+    "id": "k_gya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ギャ",
+    "romaji": "gya",
+    "alt": [],
+    "mnemonic": "ギ (gi) + ャ chiquita: se funden en una sola sílaba → gya."
+  },
+  {
+    "id": "k_gyu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ギュ",
+    "romaji": "gyu",
+    "alt": [],
+    "mnemonic": "ギ (gi) + ュ chiquita: se funden en una sola sílaba → gyu."
+  },
+  {
+    "id": "k_gyo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ギョ",
+    "romaji": "gyo",
+    "alt": [],
+    "mnemonic": "ギ (gi) + ョ chiquita: se funden en una sola sílaba → gyo."
+  },
+  {
+    "id": "k_ja",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ジャ",
+    "romaji": "ja",
+    "alt": [
+      "jya",
+      "zya"
+    ],
+    "mnemonic": "ジ (ji) + ャ chiquita: se funden en una sola sílaba → ja."
+  },
+  {
+    "id": "k_ju",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ジュ",
+    "romaji": "ju",
+    "alt": [
+      "jyu",
+      "zyu"
+    ],
+    "mnemonic": "ジ (ji) + ュ chiquita: se funden en una sola sílaba → ju."
+  },
+  {
+    "id": "k_jo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ジョ",
+    "romaji": "jo",
+    "alt": [
+      "jyo",
+      "zyo"
+    ],
+    "mnemonic": "ジ (ji) + ョ chiquita: se funden en una sola sílaba → jo."
+  },
+  {
+    "id": "k_bya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ビャ",
+    "romaji": "bya",
+    "alt": [],
+    "mnemonic": "ビ (bi) + ャ chiquita: se funden en una sola sílaba → bya."
+  },
+  {
+    "id": "k_byu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ビュ",
+    "romaji": "byu",
+    "alt": [],
+    "mnemonic": "ビ (bi) + ュ chiquita: se funden en una sola sílaba → byu."
+  },
+  {
+    "id": "k_byo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ビョ",
+    "romaji": "byo",
+    "alt": [],
+    "mnemonic": "ビ (bi) + ョ chiquita: se funden en una sola sílaba → byo."
+  },
+  {
+    "id": "k_pya",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ピャ",
+    "romaji": "pya",
+    "alt": [],
+    "mnemonic": "ピ (pi) + ャ chiquita: se funden en una sola sílaba → pya."
+  },
+  {
+    "id": "k_pyu",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ピュ",
+    "romaji": "pyu",
+    "alt": [],
+    "mnemonic": "ピ (pi) + ュ chiquita: se funden en una sola sílaba → pyu."
+  },
+  {
+    "id": "k_pyo",
+    "script": "katakana",
+    "group": "yoon",
+    "kana": "ピョ",
+    "romaji": "pyo",
+    "alt": [],
+    "mnemonic": "ピ (pi) + ョ chiquita: se funden en una sola sílaba → pyo."
+  }
+]

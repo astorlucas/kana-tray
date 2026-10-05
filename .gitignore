@@ -1,0 +1,15 @@
+# entorno virtual que crea install.sh
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# sistema
+.DS_Store
+
+# material de referencia que no usa ni la app ni tools/extract_images.py
+assets/deviantart.jpg
+assets/tofugu-hiragana-chart-sample.jpg

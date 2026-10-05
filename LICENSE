@@ -1,0 +1,39 @@
+MIT License
+
+Copyright (c) 2026 Lucas Astor
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTA SOBRE LAS IMÁGENES / NOTE ON THE IMAGES
+
+Esta licencia cubre el código y los textos propios de este repositorio.
+
+Los charts de `assets/` y las imágenes derivadas en `images/` provienen del
+método mnemotécnico de Tofugu LLC (https://www.tofugu.com) y NO están cubiertos
+por la licencia MIT. Se incluyen únicamente para que la aplicación funcione.
+Si vas a redistribuir o usar comercialmente este proyecto, pedí permiso a
+Tofugu o reemplazá esas imágenes por material propio.
+
+The charts in `assets/` and the images derived from them in `images/` come from
+Tofugu LLC's mnemonic method (https://www.tofugu.com) and are NOT covered by
+the MIT license above. They are bundled only so the application works. If you
+redistribute or make commercial use of this project, seek permission from
+Tofugu or replace those images with your own.
