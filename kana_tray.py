@@ -11,6 +11,7 @@ desde la app; KANA.md se regenera solo con la tabla de respuestas.
 
     python3 kana_tray.py            # arranca el widget
     python3 kana_tray.py --tabla    # sólo regenera KANA.md desde kana.json
+    python3 kana_tray.py --ico x.ico  # ícono .ico para accesos directos de Windows
 """
 
 import json
@@ -29,12 +30,33 @@ IMAGES_DIR = APP_DIR / "images"
 HINT_DIR = IMAGES_DIR / "pista"          # dibujo mnemotécnico, antes de responder
 RESULT_DIR = IMAGES_DIR / "resultado"    # tarjeta con romaji/explicación, después
 
-CONFIG_DIR = Path.home() / ".config" / "kana-tray"
+IS_WINDOWS = sys.platform == "win32"
+IS_LINUX = sys.platform.startswith("linux")
+
+
+def _config_dir():
+    """Windows usa %APPDATA%; el resto, ~/.config (convención XDG)."""
+    if IS_WINDOWS:
+        appdata = os.environ.get("APPDATA")
+        if appdata:
+            return Path(appdata) / "kana-tray"
+    return Path.home() / ".config" / "kana-tray"
+
+
+CONFIG_DIR = _config_dir()
 CONFIG_FILE = CONFIG_DIR / "config.json"
 HISTORY_FILE = CONFIG_DIR / "history.jsonl"
 REPORTS_DIR = CONFIG_DIR / "reportes"
-AUTOSTART_FILE = Path.home() / ".config" / "autostart" / "kana-tray.desktop"
 
+# Arranque automático: en Linux un .desktop en ~/.config/autostart, en Windows
+# un valor en la clave Run del usuario. En macOS haría falta un LaunchAgent,
+# así que ahí la opción queda deshabilitada en vez de fallar en silencio.
+AUTOSTART_FILE = Path.home() / ".config" / "autostart" / "kana-tray.desktop"
+WIN_RUN_KEY = r"Software\Microsoft\Windows\CurrentVersion\Run"
+WIN_RUN_NAME = "Kana Tray"
+AUTOSTART_SUPPORTED = IS_WINDOWS or IS_LINUX
+
+ICO_SIZE = 256           # tamaño del .ico que genera --ico (accesos directos de Windows)
 INTERVAL_PRESETS_MIN = [15, 30, 45, 60, 90, 120, 180, 240]
 PER_SESSION_PRESETS = [1, 3, 5, 10]
 SNOOZE_MIN = 10
@@ -68,7 +90,7 @@ def load_config():
     cfg = dict(DEFAULT_CONFIG)
     if CONFIG_FILE.exists():
         try:
-            cfg.update(json.loads(CONFIG_FILE.read_text()))
+            cfg.update(json.loads(CONFIG_FILE.read_text(encoding="utf-8")))
         except (json.JSONDecodeError, OSError):
             pass
     return cfg
@@ -76,7 +98,7 @@ def load_config():
 
 def save_config(cfg):
     CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-    CONFIG_FILE.write_text(json.dumps(cfg, indent=2))
+    CONFIG_FILE.write_text(json.dumps(cfg, indent=2), encoding="utf-8")
 
 
 def load_kana():
@@ -301,11 +323,26 @@ from PyQt6.QtGui import (  # noqa: E402
 from PyQt6.QtWidgets import (  # noqa: E402
     QAbstractItemView, QApplication, QComboBox, QDialog, QDialogButtonBox,
     QFormLayout, QFrame, QHBoxLayout, QHeaderView, QInputDialog, QLabel,
-    QLineEdit, QMenu, QPlainTextEdit, QPushButton, QSystemTrayIcon,
+    QLineEdit, QMenu, QMessageBox, QPlainTextEdit, QPushButton, QSystemTrayIcon,
     QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
-JP_FONT = "Noto Sans CJK JP"
+# Qt usa la primera familia que exista en el sistema: Noto en Linux, Yu Gothic
+# o Meiryo en Windows, Hiragino en macOS.
+JP_FAMILIES = ["Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic",
+               "Meiryo", "MS Gothic", "Hiragino Sans", "sans-serif"]
+
+
+def jp_font(point_size=None, pixel_size=None, bold=False):
+    f = QFont()
+    f.setFamilies(JP_FAMILIES)
+    if pixel_size is not None:
+        f.setPixelSize(pixel_size)
+    elif point_size is not None:
+        f.setPointSize(point_size)
+    f.setBold(bold)
+    return f
+
 OK_COLOR = "#2ecc71"
 BAD_COLOR = "#e74c3c"
 ACCENT = "#e0457b"
@@ -333,27 +370,23 @@ QPushButton:hover { background: #2f3645; }
 """
 
 
-def make_tray_icon(dnd=False):
-    size = 64
+def make_tray_icon(dnd=False, size=64):
+    s = size / 64.0          # el diseño está pensado a 64 px; el resto escala
     pix = QPixmap(size, size)
     pix.fill(Qt.GlobalColor.transparent)
     p = QPainter(pix)
     p.setRenderHint(QPainter.RenderHint.Antialiasing)
     p.setBrush(QColor("#6b7280" if dnd else ACCENT))
     p.setPen(Qt.PenStyle.NoPen)
-    p.drawRoundedRect(QRectF(2, 2, size - 4, size - 4), 14, 14)
-    f = QFont(JP_FONT)
-    f.setPixelSize(44)
-    f.setBold(True)
-    p.setFont(f)
+    p.drawRoundedRect(QRectF(2 * s, 2 * s, size - 4 * s, size - 4 * s), 14 * s, 14 * s)
+    p.setFont(jp_font(pixel_size=round(44 * s), bold=True))
     p.setPen(QColor("white"))
-    p.drawText(QRectF(0, 0, size, size - 2), Qt.AlignmentFlag.AlignCenter, "あ")
+    p.drawText(QRectF(0, 0, size, size - 2 * s), Qt.AlignmentFlag.AlignCenter, "あ")
     if dnd:
         p.setBrush(QColor("#1b1f27"))
-        p.drawEllipse(QRectF(38, 38, 24, 24))
-        f.setPixelSize(16)
-        p.setFont(f)
-        p.drawText(QRectF(38, 37, 24, 24), Qt.AlignmentFlag.AlignCenter, "z")
+        p.drawEllipse(QRectF(38 * s, 38 * s, 24 * s, 24 * s))
+        p.setFont(jp_font(pixel_size=round(16 * s), bold=True))
+        p.drawText(QRectF(38 * s, 37 * s, 24 * s, 24 * s), Qt.AlignmentFlag.AlignCenter, "z")
     p.end()
     return QIcon(pix)
 
@@ -507,9 +540,7 @@ class QuizCard(QWidget):
         self.done = False
         self.hint_used = False
         self.title.setText(f"{e['script'].upper()}  ·  {self.idx + 1}/{len(self.queue)}")
-        f = QFont(JP_FONT)
-        f.setPixelSize(120 if len(e["kana"]) == 1 else 82)
-        self.quadrant.setFont(f)
+        self.quadrant.setFont(jp_font(pixel_size=120 if len(e["kana"]) == 1 else 82))
         self.quadrant.setText(e["kana"])
         self._set_picture(hint_image(e) if self.picture_first else None)
         self.mnemonic.setText("")
@@ -706,7 +737,7 @@ class StatsWindow(QWidget):
             for c, v in enumerate(vals):
                 it = QTableWidgetItem(v)
                 if c == 0:
-                    it.setFont(QFont(JP_FONT, 18))
+                    it.setFont(jp_font(18))
                 if c < 5:
                     it.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
                 if c == 4:
@@ -771,7 +802,7 @@ class KanaTableWindow(QWidget):
             for c, v in enumerate(vals):
                 it = QTableWidgetItem(v)
                 if c == 0:
-                    it.setFont(QFont(JP_FONT, 22))
+                    it.setFont(jp_font(22))
                 elif c == 3:
                     pm = load_pixmap(hint_image(e) or result_image(e), 90, 90)
                     if pm:
@@ -999,8 +1030,12 @@ class KanaTray(QWidget):
 
         m.addSeparator()
         auto = QAction("Iniciar con la computadora", self, checkable=True,
-                       checked=AUTOSTART_FILE.exists())
+                       checked=autostart_enabled() if AUTOSTART_SUPPORTED else False)
         auto.triggered.connect(self.set_autostart)
+        if not AUTOSTART_SUPPORTED:
+            auto.setEnabled(False)
+            auto.setToolTip("En esta plataforma hay que configurarlo a mano "
+                            "(en macOS, un LaunchAgent).")
         m.addAction(auto)
         m.addAction("Editar kana.json…", lambda: QDesktopServices.openUrl(QUrl.fromLocalFile(str(KANA_FILE))))
         m.addAction("Carpeta de imágenes…", self.open_images)
@@ -1063,11 +1098,10 @@ class KanaTray(QWidget):
         self._update_tooltip()
 
     def set_autostart(self, enabled):
-        if enabled:
-            AUTOSTART_FILE.parent.mkdir(parents=True, exist_ok=True)
-            AUTOSTART_FILE.write_text(desktop_entry())
-        elif AUTOSTART_FILE.exists():
-            AUTOSTART_FILE.unlink()
+        error = set_autostart_enabled(enabled)
+        if error:
+            QMessageBox.warning(None, "Kana Tray",
+                                f"No pude cambiar el arranque automático:\n{error}")
         self._rebuild_menu()
 
     def open_images(self):
@@ -1099,12 +1133,25 @@ class KanaTray(QWidget):
         QApplication.instance().quit()
 
 
+def launch_interpreter():
+    """El intérprete con el que relanzar la app (en Windows, el que no abre consola)."""
+    if IS_WINDOWS:
+        quiet = Path(sys.executable).with_name("pythonw.exe")
+        if quiet.exists():
+            return quiet
+    return Path(sys.executable)
+
+
+def launch_command():
+    return f'"{launch_interpreter()}" "{APP_DIR / "kana_tray.py"}"'
+
+
 def desktop_entry():
     return (
         "[Desktop Entry]\n"
         "Name=Kana Tray\n"
         "Comment=Practicá hiragana y katakana desde la bandeja del sistema\n"
-        f"Exec={sys.executable} {APP_DIR / 'kana_tray.py'}\n"
+        f"Exec={launch_interpreter()} {APP_DIR / 'kana_tray.py'}\n"
         f"Icon={APP_DIR / 'icon.svg'}\n"
         "Type=Application\n"
         "Terminal=false\n"
@@ -1112,6 +1159,42 @@ def desktop_entry():
         "X-GNOME-Autostart-enabled=true\n"
         "StartupNotify=false\n"
     )
+
+
+def autostart_enabled():
+    """¿Está configurado para arrancar con la sesión?"""
+    if IS_WINDOWS:
+        import winreg
+        try:
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, WIN_RUN_KEY) as key:
+                winreg.QueryValueEx(key, WIN_RUN_NAME)
+            return True
+        except OSError:
+            return False
+    return AUTOSTART_FILE.exists()
+
+
+def set_autostart_enabled(enabled):
+    """Prende o apaga el arranque automático. Devuelve el error si algo falló."""
+    try:
+        if IS_WINDOWS:
+            import winreg
+            with winreg.CreateKey(winreg.HKEY_CURRENT_USER, WIN_RUN_KEY) as key:
+                if enabled:
+                    winreg.SetValueEx(key, WIN_RUN_NAME, 0, winreg.REG_SZ, launch_command())
+                else:
+                    try:
+                        winreg.DeleteValue(key, WIN_RUN_NAME)
+                    except FileNotFoundError:
+                        pass
+        elif enabled:
+            AUTOSTART_FILE.parent.mkdir(parents=True, exist_ok=True)
+            AUTOSTART_FILE.write_text(desktop_entry(), encoding="utf-8")
+        elif AUTOSTART_FILE.exists():
+            AUTOSTART_FILE.unlink()
+    except OSError as e:
+        return str(e)
+    return None
 
 
 def main():
@@ -1127,8 +1210,30 @@ def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
     app.setApplicationName("Kana Tray")
+
+    # El acceso directo de Windows necesita un .ico; se dibuja con el mismo
+    # código que el ícono de la bandeja (lo usa install.ps1).
+    if "--ico" in sys.argv:
+        try:
+            dest = Path(sys.argv[sys.argv.index("--ico") + 1])
+        except IndexError:
+            print("Falta la ruta: --ico <archivo.ico>", file=sys.stderr)
+            sys.exit(2)
+        pixmap = make_tray_icon(size=ICO_SIZE).pixmap(ICO_SIZE, ICO_SIZE)
+        if not pixmap.save(str(dest), "ICO"):
+            print(f"No pude escribir {dest}", file=sys.stderr)
+            sys.exit(1)
+        print(f"Ícono generado: {dest}")
+        return
+
     if not QSystemTrayIcon.isSystemTrayAvailable():
-        print("No hay bandeja del sistema disponible.", file=sys.stderr)
+        # Con pythonw.exe (Windows) no hay consola donde ver el error, así que
+        # además del stderr lo mostramos en un diálogo.
+        msg = ("No hay bandeja del sistema disponible.\n\n"
+               "En GNOME hace falta la extensión AppIndicator; en Windows, "
+               "revisá que el área de notificación esté habilitada.")
+        print(msg, file=sys.stderr)
+        QMessageBox.critical(None, "Kana Tray", msg)
         sys.exit(1)
     if not KANA_TABLE_FILE.exists():
         generate_kana_table(load_kana())

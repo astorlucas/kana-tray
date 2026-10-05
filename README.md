@@ -8,7 +8,8 @@ acertaste, cuántas fallaste y qué kana te está costando.
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green)
-![Linux](https://img.shields.io/badge/probado%20en-KDE%2FLinux-orange)
+![Linux](https://img.shields.io/badge/Linux-probado-success)
+![Windows](https://img.shields.io/badge/Windows-soportado-blue)
 
 ---
 
@@ -17,13 +18,13 @@ acertaste, cuántas fallaste y qué kana te está costando.
 - [Qué hace](#qué-hace)
 - [Requisitos](#requisitos)
 - [Instalación en Linux](#instalación-en-linux)
+- [Instalación en Windows](#instalación-en-windows)
 - [Instalación manual](#instalación-manual-sin-el-script)
 - [Desinstalar](#desinstalar)
 - [Cómo se usa](#cómo-se-usa)
 - [Dónde queda guardado todo](#dónde-queda-guardado-todo)
 - [Las imágenes](#las-imágenes)
 - [Las mnemotecnias (kana.json)](#las-mnemotecnias-kanajson)
-- [¿Funciona en Windows?](#funciona-en-windows)
 - [¿Y en macOS?](#y-en-macos)
 - [Estructura del repo](#estructura-del-repo)
 - [Problemas comunes](#problemas-comunes)
@@ -60,10 +61,10 @@ La tabla completa de respuestas y mnemotecnias está en **[KANA.md](KANA.md)**.
 
 | | |
 |---|---|
-| **Sistema** | Linux con un escritorio que tenga bandeja del sistema (KDE Plasma, GNOME con extensión de AppIndicator, XFCE, Cinnamon, MATE…). Desarrollado y usado en KDE. |
+| **Sistema** | **Linux** con bandeja del sistema (KDE Plasma, XFCE, Cinnamon, MATE; en GNOME hace falta la extensión AppIndicator) o **Windows 10/11**. Desarrollado y usado en KDE; ver [qué está probado](#qué-está-probado-y-qué-no). |
 | **Python** | 3.9 o más nuevo |
 | **Dependencias** | `PyQt6` (una sola; el instalador la resuelve) |
-| **Fuente japonesa** | `noto-fonts-cjk` o equivalente, si no los kana salen como cuadraditos |
+| **Fuente japonesa** | En Linux, `noto-fonts-cjk` o equivalente (si no, los kana salen como cuadraditos). En Windows ya viene con el sistema. |
 | **Opcional** | `Pillow`, sólo si querés regenerar las imágenes desde los charts de `assets/` |
 
 Pesa ~8 MB de imágenes y charts, así que el clone no es instantáneo.
@@ -190,8 +191,25 @@ tampoco las querés conservar.
 | `~/.local/share/applications/kana-tray.desktop` | entrada en el menú de aplicaciones |
 | `~/.config/autostart/kana-tray.desktop` | arranque con la sesión (si lo activaste) |
 
+En Windows es lo mismo en otros lugares:
+
+| Ruta | Qué es |
+|---|---|
+| `%APPDATA%\kana-tray\` | config, historial y reportes |
+| `…\Menú Inicio\Programas\Kana Tray.lnk` | acceso directo |
+| `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` → `Kana Tray` | arranque con la sesión |
+
 El historial es `.jsonl` a propósito: lo podés leer con `jq`, importarlo a una
 planilla o borrar líneas a mano sin romper nada.
+
+### Línea de comandos
+
+```bash
+python3 kana_tray.py              # arranca el widget
+python3 kana_tray.py --tabla      # regenera KANA.md desde kana.json
+python3 kana_tray.py --ico x.ico  # exporta el ícono a .ico (lo usa install.ps1)
+python3 tests/test_windows_port.py   # pruebas del soporte de Windows
+```
 
 ---
 
@@ -218,10 +236,9 @@ pip install pillow
 python3 tools/extract_images.py .
 ```
 
-> Ojo: `tools/extract_images.py` tiene las rutas de las fuentes Noto CJK de
-> Linux hardcodeadas (`/usr/share/fonts/noto-cjk/…`). Las imágenes ya vienen
-> generadas en el repo, así que sólo necesitás este script si querés recortarlas
-> distinto.
+> El script busca una fuente CJK entre varias rutas conocidas de Linux, Windows
+> y macOS, y te dice cuáles probó si no encuentra ninguna. Las imágenes ya vienen
+> generadas en el repo, así que sólo necesitás esto si querés recortarlas distinto.
 
 ---
 
@@ -261,140 +278,74 @@ python3 kana_tray.py --tabla
 
 ---
 
-## ¿Funciona en Windows?
+## Instalación en Windows
 
-**Casi.** La app corre, pero hay dos cosas que no funcionan y una que depende de
-cómo la arranques. PyQt6 tiene wheels oficiales para Windows, así que instalar
-la dependencia es idéntico, y el 95% del código es `pathlib` + Qt, que son
-multiplataforma.
-
-### Qué funciona sin tocar nada
-
-| | |
-|---|---|
-| ✅ | Ícono en la bandeja (área de notificación), menú, click izquierdo/derecho |
-| ✅ | La tarjeta: ventana sin bordes, siempre arriba, pegada abajo a la derecha (`availableGeometry` ya descuenta la barra de tareas) |
-| ✅ | Guardado de config, historial y reportes (quedarían en `C:\Users\<vos>\.config\kana-tray`) |
-| ✅ | Abrir carpetas y archivos desde el menú (`QDesktopServices` usa el Explorador) |
-| ✅ | Estadísticas, exportar reportes, editar mnemotecnias |
-| ✅ | El truco de Wayland es un no-op: `XDG_SESSION_TYPE` no existe en Windows |
-
-### Qué hay que cambiar
-
-**1. El autostart — es lo único que está realmente roto.**
-`AUTOSTART_FILE` apunta a `~/.config/autostart/kana-tray.desktop`, que en
-Windows no significa nada: el menú **Iniciar con la computadora** se prendería y
-escribiría un archivo que nadie lee. Hay que usar la clave `Run` del registro
-del usuario (o un acceso directo en la carpeta de Inicio).
-
-```python
-# en vez de AUTOSTART_FILE, y reemplazando set_autostart()
-IS_WINDOWS = sys.platform == "win32"
-RUN_KEY = r"Software\Microsoft\Windows\CurrentVersion\Run"
-RUN_NAME = "Kana Tray"
-
-def _win_launch_cmd():
-    # pythonw.exe no abre consola; si no está, cae en python.exe
-    pyw = Path(sys.executable).with_name("pythonw.exe")
-    exe = pyw if pyw.exists() else Path(sys.executable)
-    return f'"{exe}" "{APP_DIR / "kana_tray.py"}"'
-
-def autostart_enabled():
-    if not IS_WINDOWS:
-        return AUTOSTART_FILE.exists()
-    import winreg
-    try:
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, RUN_KEY) as k:
-            winreg.QueryValueEx(k, RUN_NAME)
-        return True
-    except OSError:
-        return False
-
-def set_autostart(enabled):
-    if not IS_WINDOWS:
-        ...  # el código actual
-        return
-    import winreg
-    with winreg.OpenKey(winreg.HKEY_CURRENT_USER, RUN_KEY, 0, winreg.KEY_SET_VALUE) as k:
-        if enabled:
-            winreg.SetValueEx(k, RUN_NAME, 0, winreg.REG_SZ, _win_launch_cmd())
-        else:
-            try:
-                winreg.DeleteValue(k, RUN_NAME)
-            except FileNotFoundError:
-                pass
-```
-
-El menú también usa `AUTOSTART_FILE.exists()` para saber si está tildado: eso
-pasa a ser `autostart_enabled()`.
-
-**2. La fuente japonesa.**
-`JP_FONT = "Noto Sans CJK JP"` no existe en Windows. Lo más probable es que Qt
-caiga en una fuente que igual dibuje los kana (Windows 10/11 traen Yu Gothic y
-MS Gothic), pero no está garantizado y el ícono あ puede salir feo. La forma
-correcta es pedir una lista de familias en orden de preferencia:
-
-```python
-JP_FAMILIES = ["Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic UI",
-               "Meiryo", "MS Gothic", "Hiragino Sans", "sans-serif"]
-
-def jp_font(px=None, pt=None, bold=False):
-    f = QFont()
-    f.setFamilies(JP_FAMILIES)       # Qt usa la primera que exista
-    if px: f.setPixelSize(px)
-    if pt: f.setPointSize(pt)
-    f.setBold(bold)
-    return f
-```
-
-Son **4 lugares** donde hoy se hace `QFont(JP_FONT, …)`: el ícono de la bandeja,
-el kana grande de la tarjeta y las dos tablas.
-
-**3. Dónde guardar los datos (opcional, pero prolijo).**
-`Path.home() / ".config"` funciona en Windows, pero deja una carpeta `.config`
-suelta en el perfil del usuario. La convención es `%APPDATA%`:
-
-```python
-CONFIG_DIR = (Path(os.environ["APPDATA"]) / "kana-tray" if IS_WINDOWS
-              else Path.home() / ".config" / "kana-tray")
-```
-
-Si lo cambiás después de haber usado la app, movete el `history.jsonl` a mano o
-perdés las estadísticas.
-
-**4. El instalador.**
-`install.sh` es bash: sirve en WSL o Git Bash, no en PowerShell. Para Windows el
-equivalente son cuatro comandos (no hace falta un `.ps1`):
+Windows 10 y 11 están soportados: el arranque automático usa la clave `Run` del
+registro del usuario y los datos van a `%APPDATA%\kana-tray`.
 
 ```powershell
 git clone https://github.com/astorlucas/kana-tray.git
 cd kana-tray
-py -m venv .venv
-.\.venv\Scripts\pip install -r requirements.txt
-.\.venv\Scripts\pythonw.exe kana_tray.py      # pythonw = sin ventana de consola
+.\install.ps1
 ```
 
-Para tenerlo a mano: click derecho en `kana_tray.py` → *Enviar a* → *Escritorio
-(crear acceso directo)*, y editá el destino para que use
-`.venv\Scripts\pythonw.exe`.
+Si PowerShell bloquea el script (política de ejecución por defecto):
 
-### Resumen
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\install.ps1
+```
 
-Son **dos cambios obligatorios** (autostart y fuente), unas 40 líneas en total,
-más dos opcionales de prolijidad. Nada de arquitectura: en la app no hay
-llamadas a binarios de Linux, ni `subprocess`, ni rutas absolutas del sistema
-(sólo en `tools/extract_images.py`, que es opcional). Si lo arrancás a mano con
-`pythonw.exe`, hoy mismo **ya funciona en Windows menos el botón de arranque
-automático**.
+### Qué hace `install.ps1`
+
+1. Busca Python 3.9+ (`py -3`, `python` o `python3`).
+2. Usa el Python del sistema si ya tiene PyQt6; si no, crea `.venv\` e instala
+   PyQt6 ahí.
+3. Genera `kana-tray.ico` con el mismo dibujo que el ícono de la bandeja.
+4. Crea el acceso directo **Kana Tray** en el menú Inicio, apuntando a
+   `pythonw.exe` (así no queda una ventana de consola abierta).
+
+Opciones, iguales a las de Linux:
+
+```powershell
+.\install.ps1 -Venv        # forzar entorno virtual
+.\install.ps1 -System      # exigir PyQt6 en el Python del sistema
+.\install.ps1 -Autostart   # además arrancar con la sesión
+.\install.ps1 -Uninstall   # quitar acceso directo, autostart, .venv e ícono
+```
+
+No pide permisos de administrador: todo queda en el perfil del usuario.
+
+### Qué está probado y qué no
+
+Desarrollé y probé la app en Linux. Para Windows:
+
+| | |
+|---|---|
+| ✅ probado | La lógica del registro y de `%APPDATA%`, con un `winreg` falso y `sys.platform` parcheado: `python3 tests/test_windows_port.py` (6 tests, corren en cualquier sistema operativo) |
+| ✅ probado | Que en Linux no cambie nada: mismas rutas, mismo `.desktop`, Noto primero en la lista de fuentes |
+| ⚠️ sin probar | `install.ps1` corriendo de verdad en una máquina Windows — no tengo uno a mano. Si algo falla ahí, abrí un issue con el mensaje de error |
+
+La fuente ya no es un problema: la app pide una lista de familias
+(`Noto Sans CJK JP` → `Yu Gothic UI` → `Meiryo` → `MS Gothic` → `Hiragino Sans`)
+y Qt usa la primera que exista, así que los kana se ven en Windows sin instalar
+nada.
+
+### Si el ícono no aparece
+
+Windows 11 esconde los íconos nuevos del área de notificación. Están en la
+flechita `^` de la barra de tareas; para fijarlo: *Configuración → Personalización
+→ Barra de tareas → Otros iconos de la bandeja del sistema* y prendé **Kana Tray**.
 
 ---
 
 ## ¿Y en macOS?
 
-Mismo panorama que Windows: PyQt6 anda, el tray aparece en la barra de menú de
-arriba, y lo que hay que cambiar es el autostart (un `LaunchAgent` en
-`~/Library/LaunchAgents/*.plist`) y la fuente (`Hiragino Sans`, que viene
-instalada). Sin probar.
+La app corre (PyQt6 anda y el ícono va a la barra de menú de arriba, con
+`Hiragino Sans` como fuente), pero el **arranque automático no está
+implementado**: haría falta un `LaunchAgent` en `~/Library/LaunchAgents/*.plist`.
+Para que no falle en silencio, en macOS la opción «Iniciar con la computadora»
+aparece deshabilitada. Sin probar en una Mac.
 
 ---
 
@@ -406,12 +357,14 @@ kana.json                 los kana: romaji, alternativas y mnemotecnia
 KANA.md                   tabla autogenerada desde kana.json — no editar
 requirements.txt          PyQt6
 install.sh                instalador / desinstalador para Linux
+install.ps1               instalador / desinstalador para Windows
 kana-tray.desktop         plantilla de lanzador (install.sh completa las rutas)
-icon.svg                  ícono
+icon.svg                  ícono (el .ico de Windows lo genera --ico)
 images/pista/             dibujo mnemotécnico, se ve antes de responder
 images/resultado/         tarjeta con la respuesta, se ve después
 assets/                   los charts originales de donde se recortan las imágenes
 tools/extract_images.py   recorta y genera las imágenes desde assets/
+tests/                    pruebas del soporte de Windows (corren en cualquier SO)
 ```
 
 Dentro de `kana_tray.py`, de arriba hacia abajo: constantes y config → datos
@@ -456,10 +409,13 @@ actualizar `KANA.md`.
 
 El código es MIT (ver [LICENSE](LICENSE)).
 
-Las mnemotecnias y los charts de `assets/` vienen del método de
+Las mnemotecnias y los charts mnemotécnicos de `assets/` vienen del método de
 **[Tofugu](https://www.tofugu.com/japanese/learn-hiragana/)** (*Learn Hiragana*
 y *Learn Katakana*), que son gratis en su sitio y pertenecen a Tofugu LLC. Las
 imágenes de `images/` son recortes de esos charts: están acá sólo para que la
 app funcione, no son propias y la licencia MIT no las cubre. Si vas a hacer algo
 público con esto, pedí permiso o reemplazá las imágenes por tus propios dibujos
 (el formato está explicado arriba).
+
+`assets/kana-chart-by-hwangje.jpg` es una tabla de kana de **[hwangje](https://www.deviantart.com/hwangje)** (DeviantArt), incluida como
+referencia; tampoco la cubre la licencia MIT.

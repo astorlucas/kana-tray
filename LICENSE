@@ -26,14 +26,20 @@ NOTA SOBRE LAS IMÁGENES / NOTE ON THE IMAGES
 
 Esta licencia cubre el código y los textos propios de este repositorio.
 
-Los charts de `assets/` y las imágenes derivadas en `images/` provienen del
-método mnemotécnico de Tofugu LLC (https://www.tofugu.com) y NO están cubiertos
-por la licencia MIT. Se incluyen únicamente para que la aplicación funcione.
-Si vas a redistribuir o usar comercialmente este proyecto, pedí permiso a
-Tofugu o reemplazá esas imágenes por material propio.
+Los charts mnemotécnicos de `assets/` y las imágenes derivadas en `images/`
+provienen del método de Tofugu LLC (https://www.tofugu.com). La tabla de kana
+`assets/kana-chart-by-hwangje.jpg` es de hwangje
+(https://www.deviantart.com/hwangje) y está incluida sólo como referencia.
+Ninguna de las dos está cubierta por la licencia MIT: se incluyen únicamente
+para que la aplicación funcione y se acredita a sus autores. Si vas a
+redistribuir o usar comercialmente este proyecto, pedí permiso a quien
+corresponda o reemplazá esas imágenes por material propio.
 
-The charts in `assets/` and the images derived from them in `images/` come from
-Tofugu LLC's mnemonic method (https://www.tofugu.com) and are NOT covered by
-the MIT license above. They are bundled only so the application works. If you
-redistribute or make commercial use of this project, seek permission from
-Tofugu or replace those images with your own.
+The mnemonic charts in `assets/` and the images derived from them in `images/`
+come from Tofugu LLC's method (https://www.tofugu.com). The kana chart
+`assets/kana-chart-by-hwangje.jpg` is by hwangje
+(https://www.deviantart.com/hwangje) and is bundled for reference only. Neither
+is covered by the MIT license above: they are included only so the application
+works, with credit to their authors. If you redistribute or make commercial use
+of this project, seek permission from the respective authors or replace those
+images with your own.

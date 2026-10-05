@@ -79,8 +79,40 @@ for ci, c in enumerate(Y_COLS):
 # card in the same Tofugu style (rounded box + black romaji bubble).
 import json
 from PIL import ImageDraw, ImageFont
-CJK = "/usr/share/fonts/noto-cjk/NotoSansCJK-Black.ttc"
-LAT = "/usr/share/fonts/noto-cjk/NotoSansCJK-Bold.ttc"
+
+# Fuentes para dibujar las tarjetas: se usa la primera que exista en el sistema.
+CJK_CANDIDATES = [
+    "/usr/share/fonts/noto-cjk/NotoSansCJK-Black.ttc",           # Arch
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc",      # Debian/Ubuntu
+    "/usr/share/fonts/truetype/noto/NotoSansCJK-Black.ttc",
+    "C:/Windows/Fonts/YuGothB.ttc",                              # Windows
+    "C:/Windows/Fonts/msgothic.ttc",
+    "/System/Library/Fonts/Hiragino Sans GB.ttc",                # macOS
+]
+LAT_CANDIDATES = [
+    "/usr/share/fonts/noto-cjk/NotoSansCJK-Bold.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+    "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
+    "C:/Windows/Fonts/arialbd.ttf",
+    "C:/Windows/Fonts/segoeuib.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+]
+
+
+def pick_font(candidates, what):
+    for path in candidates:
+        if Path(path).exists():
+            return path
+    raise SystemExit(
+        f"No encontré una fuente {what} para dibujar las tarjetas. Probé:\n  "
+        + "\n  ".join(candidates)
+        + "\nInstalá Noto CJK (pacman -S noto-fonts-cjk / apt install fonts-noto-cjk)\n"
+          "o agregá la ruta de tu fuente a este script."
+    )
+
+
+CJK = pick_font(CJK_CANDIDATES, "japonesa")
+LAT = pick_font(LAT_CANDIDATES, "latina en negrita")
 
 
 def draw_card(kana, label, name):

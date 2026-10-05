@@ -10,6 +10,5 @@ __pycache__/
 # sistema
 .DS_Store
 
-# material de referencia que no usa ni la app ni tools/extract_images.py
-assets/deviantart.jpg
-assets/tofugu-hiragana-chart-sample.jpg
+# ícono que genera install.ps1 para el acceso directo de Windows
+kana-tray.ico
