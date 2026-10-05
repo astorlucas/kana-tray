@@ -50,7 +50,7 @@ acertaste, cuántas fallaste y qué kana te está costando.
   respuestas válidas sin tocar código; se guarda en `kana.json` y se regenera
   [`KANA.md`](KANA.md).
 - Cubre los **46 hiragana + 46 katakana básicos**, más **dakuten/handakuten**
-  (が, ざ, だ, ば, ぱ…) y **yōon** (きゃ, しゅ, ちょ…).
+  (が, ざ, だ, ば, ぱ…) y **yōon** (きゃ, しゅ, ちょ…): 208 entradas en total.
 
 La tabla completa de respuestas y mnemotecnias está en **[KANA.md](KANA.md)**.
 
